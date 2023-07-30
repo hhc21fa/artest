@@ -1,10 +1,15 @@
 <html>
   <head>
-    <title> AR Test 008</title>
+    <title> AR Test 010</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
     <script>
+      // detect click event
+      const examplePlane = document.querySelector('#pin1');
+      examplePlane.addEventListener("click", event => {
+        alert("PIN 001 clicked");
+      });
     </script>
   </head>
   <body>
@@ -16,12 +21,11 @@
         <a-asset-item id="pinModel2" src="pin.gltf"></a-asset-item>
         <a-asset-item id="pinModel3" src="pin.gltf"></a-asset-item>
       </a-assets>
-
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-      <a-entity mindar-image-target="targetIndex: 0">
+      <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
+      <a-entity mindar-image-target="targetIndex: 0" id='map1'>
         <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.5 0.5 0.5" src="#avatarModel">
         <a-gltf-model id="pin1" rotation="90 0 0" position="0 0.5 0.1" scale="0.1 0.1 0.1" src="#pinModel1" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
-        <a-gltf-model id="pin2" rotation="90 0 0" position="2 0.5 1.1" scale="0.1 0.1 0.1" src="#pinModel2" animation="property: position; to: 2.0 0.1 1.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
+        <a-gltf-model id="pin2" rotation="90 0 0" position="0.8 0.5 1.1" scale="0.1 0.1 0.1" src="#pinModel2" animation="property: position; to: 0.8 0.1 1.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
