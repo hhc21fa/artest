@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title> AR Test 019</title>
+    <title> AR Test 021</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
@@ -32,9 +32,9 @@
         <a-asset-item id="pinModel3" src="pin.gltf"></a-asset-item>
       </a-assets>
       <a-entity mindar-image-target="targetIndex: 0" id='map1'>
-        <a-gltf-model rotation="90 0 0 " position="0 0 0" scale="0.5 0.5 0.5" src="#avatarModel"></a-gltf-model>
-        <a-gltf-model id="pin1" rotation="180 0 0" position="0 0.1 0.1" scale="0.05 0.05 0.05" src="#pinModel1" animation="property: position; to: 0 0.1 0.5; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
-        <a-gltf-model id="pin2" rotation="180 0 0" position="0.8 0.1 0.1" scale="0.05 0.05 0.05" src="#pinModel2" animation="property: position; to: 0.8 0.1 0.5; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
+        <a-gltf-model class="clickable" rotation="90 0 0 " position="0 0 0" scale="1.0 1.0 1.0" src="#avatarModel"></a-gltf-model>
+        <a-gltf-model class="clickable" id="pin1" rotation="180 0 0" position="0 0.1 0.1" scale="0.05 0.05 0.05" src="#pinModel1" animation="property: position; to: 0 0.1 0.5; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
+        <a-gltf-model class="clickable" id="pin2" rotation="180 0 0" position="0.8 0.1 0.1" scale="0.05 0.05 0.05" src="#pinModel2" animation="property: position; to: 0.8 0.1 0.5; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate"></a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
