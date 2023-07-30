@@ -1,16 +1,23 @@
 <html>
   <head>
-    <title> AR Test 011</title>
+    <title> AR Test 012</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
     <script>
+      	const sceneEl = document.querySelector('a-scene');
+        let arSystem;
+        	sceneEl.addEventListener('loaded', function () {
+        	  arSystem = sceneEl.systems["mindar-image-system"];
+        	});
       document.addEventListener("DOMContentLoaded", function() {
         // detect click event
-        const examplePlane = document.querySelector('#pin1');
+        const examplePlane = document.querySelector('#map1');
         examplePlane.addEventListener("click", event => {
           alert("PIN 001 clicked");
         });
+
+        
       });
       
     </script>
