@@ -5,7 +5,10 @@
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
     <script>
-      alert("1");
+      const examplePlane = document.querySelector('#pin1');
+      examplePlane.addEventListener("click", event => {
+        alert("pin1");
+      });
     </script>
   </head>
   <body>
